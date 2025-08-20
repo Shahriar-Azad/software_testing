@@ -8,3 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 driver = webdriver.Chrome()
 driver.get("https://opensource-demo.orangehrmlive.com/")
 
+try:
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.NAME, "username"))
+    )
+

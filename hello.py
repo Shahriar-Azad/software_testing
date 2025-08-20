@@ -25,4 +25,6 @@ try:
     else:
         print("Login test failed!")
 
-
+finally:
+    input("Enter to close the browser")
+    driver.quit()

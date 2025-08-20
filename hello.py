@@ -17,4 +17,12 @@ try:
     driver.find_element(By.NAME, "password").send_keys("admin123")
     driver.find_element(By.XPATH, "//button[@type='submit']").click()
 
+    # check title
+    actual_title = driver.title
+    expected_title = "OrangeHRM"
+    if actual_title == expected_title:
+        print("Login test passed!")
+    else:
+        print("Login test failed!")
+
 
